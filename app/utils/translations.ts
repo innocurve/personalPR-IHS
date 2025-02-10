@@ -22,10 +22,10 @@ export const translations: TranslationDictionary = {
     zh: '价值观',
   },
   valuesDescription: {
-    ko: '우리는\n격동과 변혁의 시대\n한가운데에 서 있습니다.',
-    en: 'We stand\nin the midst of an era\nof turbulence and transformation.',
-    ja: '私たちは\n激動と変革の時代の\n真っ只中にいます。',
-    zh: '我们正处于\n变革与动荡时代的\n中心。',
+    ko: 'AI로\n더 나은 삶을 만들고\n인연을 소중히',
+    en: 'Creating better lives\nwith AI and\nvaluing relationships',
+    ja: 'AIで\nより良い人生を創り\n縁を大切に',
+    zh: '用AI\n创造更好的生活\n珍惜缘分',
   },
   history: {
     ko: '연혁',
@@ -40,16 +40,16 @@ export const translations: TranslationDictionary = {
     zh: '项目',
   },
   name: {
-    ko: '정민기',
-    en: 'Minki Jeong',
-    ja: '鄭玟基',
-    zh: '郑玟基',
+    ko: '오경찬',
+    en: 'Kyungchan Oh',
+    ja: '吳烱燦',
+    zh: '吳烱燦',
   },
   title: {
-    ko: '사단법인 이사장 · 기업인',
-    en: 'Chairman of the Association · Entrepreneur',
-    ja: '社団法人理事長 · 企業家',
-    zh: '协会会长·企业家',
+    ko: 'Financial Planner · 사단법인 부본부장',
+    en: 'Financial Planner · Vice Director of the Association',
+    ja: 'ファイナンシャルプランナー · 社団法人副本部長',
+    zh: '理财规划师 · 社团法人副本部长',
   },
   birth: {
     ko: '출생',
@@ -58,10 +58,10 @@ export const translations: TranslationDictionary = {
     zh: '出生',
   },
   birthDate: {
-    ko: '1996년 4월 19일',
-    en: 'April 19, 1996',
-    ja: '1996年4月19日',
-    zh: '1996年4月19日',
+    ko: '1998년 5월 14일',
+    en: 'May 14, 1998',
+    ja: '1998年5月14日',
+    zh: '1998年5月14日',
   },
   affiliation: {
     ko: '소속',
@@ -70,10 +70,10 @@ export const translations: TranslationDictionary = {
     zh: '隶属',
   },
   affiliationDescription: {
-    ko: '(사)대한청년을세계로(이사장)\n이노커브(CEO)',
-    en: 'Chairperson, Korea Youth to the World Association (KYTWA)\nCEO, InnoCurve',
-    ja: '(社)大韓青年を世界へ（理事長）\nイノカーブ（CEO）',
-    zh: '韩国青年走向世界协会会长\nInnoCurve首席执行官',
+    ko: '메리츠 RCM본부 2본부 3지점 FP\n(사)대한청년을세계로 대전본부 부본부장\n새마을 대덕구청년미래연대 부회장',
+    en: 'Financial Planner, Meritz RCM Division 2 Branch 3\nVice Director, Korea Youth to the World Association Daejeon Branch\nVice Chairman, Saemaul Daedeok-gu Youth Future Alliance',
+    ja: 'メリッツRCM本部第2本部第3支店 FP\n(社)大韓青年を世界へ大田本部副本部長\nセマウル大徳区青年未来連帯副会長',
+    zh: '美利兹RCM本部第2本部第3支店 理财规划师\n(社)韩国青年走向世界大田本部副本部长\n新村大德区青年未来联合副会长',
   },
   education: {
     ko: '학력',
@@ -82,10 +82,10 @@ export const translations: TranslationDictionary = {
     zh: '教育',
   },
   educationDescription: {
-    ko: '동국대학교 범죄학 석사\n연세대학교 AI리더십 최고위',
-    en: "Master's in Criminology, Dongguk University\nAdvanced Leadership in AI, Yonsei University",
-    ja: '東国大学 犯罪学 修士\n延世大学 AIリーダーシップ 最高位課程',
-    zh: '东国大学犯罪学硕士\n延世大学AI领导力高级课程',
+    ko: '추가 예정',
+    en: 'To be updated',
+    ja: '追加予定',
+    zh: '待添加',
   },
   field: {
     ko: '분야',
@@ -94,10 +94,10 @@ export const translations: TranslationDictionary = {
     zh: '领域',
   },
   fieldDescription: {
-    ko: 'AI, 청년, 범죄학',
-    en: 'AI, Youth, Criminology',
-    ja: 'AI、若者、犯罪学',
-    zh: 'AI，青年，犯罪学',
+    ko: 'AI, 보험, 청년',
+    en: 'AI, Insurance, Youth',
+    ja: 'AI、保険、青年',
+    zh: 'AI，保险，青年',
   },
   mbti: {
     ko: 'MBTI',
@@ -106,10 +106,10 @@ export const translations: TranslationDictionary = {
     zh: 'MBTI',
   },
   mbtiType: {
-    ko: 'ENTJ',
-    en: 'ENTJ',
-    ja: 'ENTJ',
-    zh: 'ENTJ',
+    ko: 'ESTJ',
+    en: 'ESTJ',
+    ja: 'ESTJ',
+    zh: 'ESTJ',
   },
   contact: {
     ko: '문의',
@@ -214,16 +214,16 @@ export const translations: TranslationDictionary = {
     zh: '联系方式',
   },
   greetingTitle: {
-    ko: '희미해지는 것이 아닌,\n더 깊이 새겨지는\n당신의 존재',
-    en: 'Not fading away,\nYour presence\nDeepens over time',
-    ja: '消えゆくのではなく、\nより深く刻まれゆく\nあなたの存在',
-    zh: '不是渐渐褪色，\n而是愈发深刻地\n铭记你的存在',
+    ko: '소중한 인연을 잇고,\n더 나은 미래를 설계하다',
+    en: 'Connecting Precious Relationships,\nDesigning a Better Future',
+    ja: '大切な縁をつなぎ、\nより良い未来を設計する',
+    zh: '连接珍贵的缘分，\n设计更美好的未来',
   },
   greetingDescription: {
-    ko: '인간의 존엄이 위협받는 AI 시대에도,\n당신의 이야기는 결코 흐려지지 않습니다.\n\nInnoCard는 당신의 가치를 더 선명하고,\n더 오래도록 기억하게 만듭니다.',
-    en: 'Even in the AI era where human dignity is threatened,\nyour story will never fade.\n\nInnoCard makes your value clearer\nand more memorable for longer.',
-    ja: '人間の尊厳が脅かされるAI時代でも、\nあなたの物語は決して薄れることはありません。\n\nInnoCardで、あなたの価値を\nより鮮明に、より永く心に刻みます。',
-    zh: '即使在人类尊严受到威胁的AI时代，\n你的故事也永远不会褪色。\n\nInnoCard让你的价值\n更清晰，更持久地铭记于心。',
+    ko: 'AI가 발전할수록,\n인간의 가치는 더욱 선명해집니다.\n\n저는 보험과 AI를 결합해\n더 정확하고 신뢰할 수 있는\n맞춤형 솔루션을 제공합니다.\n\n작은 인연도 소중히 여기며,\n더 나은 미래를 함께 만들어갑니다.',
+    en: 'As AI advances,\nhuman value becomes even clearer.\n\nI provide accurate and reliable\ncustomized solutions by combining\ninsurance with AI.\n\nValuing every connection,\nwe create a better future together.',
+    ja: 'AIが発展するほど、\n人間の価値はより鮮明になります。\n\n保険とAIを組み合わせ、\nより正確で信頼できる\nカスタマイズされたソリューションを提供します。\n\n小さな縁も大切にし、\nより良い未来を共に創造します。',
+    zh: '随着AI的发展，\n人类的价值愈发清晰。\n\n我通过结合保险和AI，\n提供更准确、更可靠的\n定制化解决方案。\n\n珍惜每一份缘分，\n共同创造更美好的未来。',
   },
   chatInputPlaceholder: {
     ko: '메시지를 입력하세요...',
@@ -298,16 +298,16 @@ export const translations: TranslationDictionary = {
     zh: '返回',
   },
   initialGreeting: {
-    ko: '안녕하세요! 저는 정민기입니다. 무엇을 도와드릴까요?',
-    en: 'Hello! I am Minki Jeong. How can I help you?',
-    ja: 'こんにちは！鄭民基と申します。何かお手伝いできることはありますか？',
-    zh: '你好！我是郑民基。我能为您做些什么？'
+    ko: '안녕하세요! 저는 오경찬입니다. 무엇을 도와드릴까요?',
+    en: 'Hello! I am Kyungchan Oh. How can I help you?',
+    ja: 'こんにちは！吳烱燦と申します。何かお手伝いできることはありますか？',
+    zh: '你好！我是吳烱燦。我能为您做些什么？'
   },
   cloneGreeting: {
-    ko: "안녕하세요! 저는 정민기's Clone입니다. 무엇을 도와드릴까요?",
-    en: "Hello! I'm Minki Jeong's Clone. How can I help you?",
-    ja: "こんにちは！鄭玟基のクローンです。どのようにお手伝いできますか？",
-    zh: "你好！我是郑玟基的克隆。我能为您做些什么？"
+    ko: "안녕하세요! 저는 오경찬's Clone입니다. 무엇을 도와드릴까요?",
+    en: "Hello! I'm Kyungchan Oh's Clone. How can I help you?",
+    ja: "こんにちは！吳烱燦のクローンです。どのようにお手伝いできますか？",
+    zh: "你好！我是吳烱燦的克隆。我能为您做些什么？"
   },
 };
 

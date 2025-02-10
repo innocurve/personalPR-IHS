@@ -262,7 +262,7 @@ return (
             <div className="flex flex-col items-center space-y-6">
               <div className="w-40 h-40 sm:w-56 sm:h-56 relative">
                 <Image 
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JTSehNl2EKBQk7qe2rhkhmUTpPGYrW.png"
+                  src="/profile.png"
                   alt={translate('name', language)} 
                   fill
                   sizes="(max-width: 640px) 160px, 224px"
@@ -409,38 +409,26 @@ return (
             <h3 className="font-bold text-lg mb-4">{translate('contact', language)}</h3>
             <div className="flex items-center space-x-2 mb-2">
               <Mail className="w-5 h-5" />
-              <p>hjpw96@naver.com</p>
+              <p>zhrpxk0514@naver.com</p>
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="w-5 h-5" />
-              <p>010-9037-4458</p>
+              <p>010-9984-9308</p>
             </div>
           </div>
           <div>
             <h3 className="font-bold text-lg mb-4">{translate('affiliation', language)}</h3>
             <div className="space-y-2">
-              <Link 
-                href="https://www.daecheongse.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="block hover:text-blue-400 transition duration-300"
-              >
-                (사)대한청년을세계로
-              </Link>
-              <p>이노커브</p>
+              <p>메리츠 RCM 2본부</p>
+              <p>(사)대한청년을세계로</p>
+              <p>새마을 대덕구청년미래연대</p>
             </div>
           </div>
           <div>
             <h3 className="font-bold text-lg mb-4">{translate('socialMedia', language)}</h3>
             <div className="space-y-2">
-              <Link href="https://www.instagram.com/cpmw_mk/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400 transition duration-300">
+              <Link href="https://www.instagram.com/o_ooookc/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400 transition duration-300">
                 <span>Instagram</span>
-              </Link>
-              <Link href="https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&mra=bjky&x_csa=%7B%22fromUi%22%3A%22kb%22%7D&pkid=1&os=18661100&qvt=0&query=%EC%A0%95%EB%AF%BC%EA%B8%B0" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400 transition duration-300">
-                <span>Naver</span>
-              </Link>
-              <Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400 transition duration-300">
-                <span>Facebook</span>
               </Link>
             </div>
           </div>

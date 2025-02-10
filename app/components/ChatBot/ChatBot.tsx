@@ -281,7 +281,7 @@ const ChatBot = ({ isOpen: externalIsOpen, onOpenChange }: ChatBotProps) => {
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full overflow-hidden bg-white">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-JTSehNl2EKBQk7qe2rhkhmUTpPGYrW.png"
+                  src="/profile.png"
                   alt="ChatBot Profile"
                   width={40}
                   height={40}
@@ -289,7 +289,7 @@ const ChatBot = ({ isOpen: externalIsOpen, onOpenChange }: ChatBotProps) => {
                 />
               </div>
               <div>
-                <h2 className="font-bold text-white">정민기&apos;s clone</h2>
+                <h2 className="font-bold text-white">오경찬&apos;s clone</h2>
                 <p className="text-sm text-gray-100">온라인</p>
               </div>
             </div>
