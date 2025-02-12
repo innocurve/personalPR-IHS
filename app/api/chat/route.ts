@@ -117,7 +117,7 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
-  const { messages, pdfContent } = await request.json();
+  const { messages } = await request.json();
   const lastUserMessage = messages.findLast((msg: any) => msg.role === 'user')?.content || '';
   const ownerId = process.env.NEXT_PUBLIC_OWNER_ID;
 
@@ -156,9 +156,6 @@ export async function POST(request: Request) {
       ? `이름: ${owner.name}\n나이: ${owner.age}\n취미: ${owner.hobbies.join(', ')}\n가치관: ${owner.values}\n나라: ${owner.country}\n생년월일: ${owner.birth}\nowner_id: ${owner.owner_id}`
       : '';
 
-    // 관련 PDF 내용 검색
-    const relevantPdfContent = await searchRelevantChunks(lastUserMessage);
-
     // 시스템 프롬프트 작성
     let systemPrompt = `당신은 오경찬의 AI 클론입니다. 아래 정보를 바탕으로 1인칭으로 자연스럽게 대화하세요.
     현재 시각은 ${new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })} 입니다.
@@ -171,10 +168,6 @@ ${experienceInfo}
 
 프로젝트:
 ${projectInfo}`;
-
-    if (relevantPdfContent) {
-      systemPrompt += `\n\n관련 문서 내용:\n${relevantPdfContent}`;
-    }
 
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
