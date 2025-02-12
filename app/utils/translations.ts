@@ -46,10 +46,10 @@ export const translations: TranslationDictionary = {
     zh: '吳烱燦',
   },
   title: {
-    ko: 'Financial Planner · 사단법인 부본부장',
-    en: 'Financial Planner · Vice Director of the Association',
-    ja: 'ファイナンシャルプランナー · 社団法人副本部長',
-    zh: '理财规划师 · 社团法人副本部长',
+    ko: 'Financial Planner|사단법인 부본부장',
+    en: 'Financial Planner|Vice Director of Non-Profit Organization',
+    ja: 'ファイナンシャルプランナー|社団法人副本部長',
+    zh: '理财规划师|社团法人副本部长',
   },
   birth: {
     ko: '출생',

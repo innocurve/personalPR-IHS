@@ -272,7 +272,14 @@ return (
               </div>
               <div className="text-center">
                 <h2 className="text-4xl sm:text-5xl font-bold mb-3">{translate('name', language)}</h2>
-                <p className="text-2xl sm:text-3xl text-gray-600 mb-6">{translate('title', language)}</p>
+                <p className="text-2xl sm:text-3xl text-gray-600 mb-6">
+                  {translate('title', language).split('|').map((part, index) => (
+                    <span key={index} className="sm:inline block">
+                      {index > 0 && <span className="sm:inline hidden"> · </span>}
+                      {part}
+                    </span>
+                  ))}
+                </p>
               </div>
               <div className="w-full max-w-2xl mx-auto">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
