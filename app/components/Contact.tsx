@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Bot, Phone, Video, CreditCard } from 'lucide-react';
 import { Language, translate } from '../utils/translations';
+import Image from 'next/image';
 
 interface ContactProps {
   language: Language;
@@ -11,6 +12,15 @@ interface ContactProps {
 export default function Contact({ language }: ContactProps) {
   return (
     <div className="flex flex-col gap-4 ">
+      <div className="profile-section">
+        <Image
+          src="/profile.png"
+          alt="Contact Profile"
+          width={64}
+          height={64}
+          className="rounded-full"
+        />
+      </div>
       <Link
         href="/ai-clone"
         className="flex items-center gap-2 group"

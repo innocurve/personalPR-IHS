@@ -14,34 +14,30 @@ const MyValues: React.FC<MyValuesProps> = ({ language }) => {
   const content = {
     ko: [
       translate('valuesDescription', language),
-      "세상은 빠르게 변화하고 있지만, 모든 변화가 사람들에게 실질적인 도움이 되는 것은 아닙니다. 저는 작은 만남이라도 소중히 여기며, 인공지능을 활용해 현실적인 가치를 제공하는 것이 중요하다고 생각합니다.",
-      "AI는 단순한 기술이 아니라, 어려움을 겪는 사람들에게 해결책을 제시하고, 개인과 사회가 함께 성장할 수 있도록 돕는 도구가 되어야 합니다. 누구나 쉽게 접근하고 활용할 수 있도록 장벽을 낮추고, 이를 통해 더 많은 사람들이 혜택을 누릴 수 있어야 합니다.",
-      "저는 AI와 보험을 결합하여 맞춤형 솔루션을 제공하고, 고객이 필요할 때 가장 적절한 정보를 전달하며, 지속적인 관리로 더 나은 선택을 돕고자 합니다. 기술을 활용해 실질적인 가치를 창출하고, 모두가 성장할 수 있는 환경을 만들어가는 것이 저의 목표입니다.",
-      "변화하는 시대 속에서도 끊임없이 배우고 혁신하며, 지식과 경험을 나누고 공유하는 것이 진정한 발전이라 믿습니다. 함께 성장하는 사회를 만들기 위해, 오늘도 최선을 다하겠습니다.",
+      "저희 클린에어는 고객의 건강과 안전을 최우선으로 생각합니다. 에어컨은 우리가 매일 사용하는 필수 가전제품이지만, 제대로 관리되지 않으면 세균, 곰팡이, 미세먼지가 쌓여 건강에 심각한 영향을 미칠 수 있습니다. 이를 해결하기 위해 저희는 항상 최고 품질의 세척 서비스를 제공하고, 고객이 보다 쾌적하고 건강한 환경에서 생활할 수 있도록 돕고자 합니다.",
+      "저희의 핵심 가치는 정직과 신뢰입니다. 고객에게 항상 투명한 서비스를 제공하며, 세척 후에는 어떤 작업이 이루어졌는지 자세히 설명드리고, 신뢰를 바탕으로 장기적인 관계를 유지하는 것을 중요하게 생각합니다. 또한, 저희는 최신 기술을 활용하여 효율적인 서비스를 제공하는 데 집중하고 있습니다.",
+      "또한, 지속 가능성을 중요시합니다. 환경을 생각한 친환경적인 세척 방법과 제품을 사용하여, 고객님께서 만족하실 뿐만 아니라 지구 환경에도 기여할 수 있도록 최선을 다하고 있습니다. 지역 사회의 일원으로서, 사회적 책임을 다하고, 새마을회 청년회장으로서 지역 발전에도 힘쓰고 있습니다. 클린에어는 고객의 행복과 건강을 위해 지속적으로 성장하며, 더 나은 내일을 위해 노력하는 기업이 되겠습니다.",
       "감사합니다."
     ],
     en: [
       translate('valuesDescription', language),
-      "While the world is rapidly changing, not all changes bring practical benefits to people. I believe in valuing every encounter, no matter how small, and providing practical value through artificial intelligence.",
-      "AI is not just a technology; it should be a tool that provides solutions to people facing difficulties and helps both individuals and society grow together. We need to lower barriers so that everyone can easily access and utilize it, allowing more people to benefit.",
-      "By combining AI with insurance, I aim to provide customized solutions, deliver the most appropriate information when clients need it, and help make better choices through continuous management. My goal is to create real value through technology and build an environment where everyone can grow.",
-      "Even in these changing times, I believe true progress comes from continuous learning, innovation, and sharing knowledge and experience. I will do my best every day to create a society where we can grow together.",
+      "At Clean Air, we prioritize our customers' health and safety. While air conditioners are essential appliances we use daily, if not properly maintained, they can accumulate bacteria, mold, and fine dust that seriously affect health. To address this, we always provide the highest quality cleaning services to help our customers maintain a more comfortable and healthy environment.",
+      "Our core values are honesty and trust. We provide transparent services to our customers, explain in detail what work has been done after cleaning, and consider it important to maintain long-term relationships based on trust. Additionally, we focus on providing efficient services using the latest technology.",
+      "We also value sustainability. By using eco-friendly cleaning methods and products that consider the environment, we strive to not only satisfy our customers but also contribute to the global environment. As a member of the local community, we fulfill our social responsibilities and, as the chairman of the Saemaul Youth Association, work towards regional development. Clean Air continuously grows for our customers' happiness and health, striving to become a company that works for a better tomorrow.",
       "Thank you."
     ],
     ja: [
       translate('valuesDescription', language),
-      "世界は急速に変化していますが、すべての変化が人々に実質的な助けとなるわけではありません。私は小さな出会いも大切にし、人工知能を活用して現実的な価値を提供することが重要だと考えています。",
-      "AIは単なる技術ではなく、困難を抱える人々に解決策を提示し、個人と社会が共に成長できるよう支援するツールでなければなりません。誰もが簡単にアクセスし活用できるよう障壁を下げ、より多くの人々が恩恵を受けられるようにする必要があります。",
-      "私はAIと保険を組み合わせてカスタマイズされたソリューションを提供し、お客様が必要とする時に最適な情報を届け、継続的な管理でより良い選択をサポートしていきます。技術を活用して実質的な価値を創出し、皆が成長できる環境を作ることが私の目標です。",
-      "変化する時代の中でも、絶え間なく学び革新し、知識と経験を共有することが真の発展だと信じています。共に成長する社会を作るため、今日も最善を尽くしてまいります。",
+      "クリーンエアは、お客様の健康と安全を最優先に考えています。エアコンは私たちが毎日使用する必需品ですが、適切に管理されないと、細菌、カビ、微細粉塵が蓄積され、健康に深刻な影響を及ぼす可能性があります。これを解決するため、私たちは常に最高品質の洗浄サービスを提供し、お客様がより快適で健康的な環境で生活できるようサポートしています。",
+      "私たちの核心的価値は誠実と信頼です。お客様に常に透明性のあるサービスを提供し、洗浄後にはどのような作業が行われたのか詳しく説明し、信頼を基に長期的な関係を維持することを重要視しています。また、最新技術を活用して効率的なサービスを提供することに注力しています。",
+      "また、持続可能性も重視しています。環境に配慮した環境にやさしい洗浄方法と製品を使用し、お客様にご満足いただくだけでなく、地球環境にも貢献できるよう最善を尽くしています。地域社会の一員として、社会的責任を果たし、セマウル会青年会長として地域発展にも力を入れています。クリーンエアはお客様の幸せと健康のために継続的に成長し、より良い明日のために努力する企業となります。",
       "ありがとうございます。"
     ],
     zh: [
       translate('valuesDescription', language),
-      "世界正在快速变化，但并非所有的变化都能为人们带来实际帮助。我认为重视每一次相遇，无论多么微小，并通过人工智能提供实际价值都很重要。",
-      "AI不仅仅是一项技术，它应该成为为困难中的人们提供解决方案，帮助个人和社会共同成长的工具。我们需要降低门槛，让每个人都能轻松访问和使用它，使更多人受益。",
-      "我的目标是通过将AI与保险相结合，提供定制化解决方案，在客户需要时传递最恰当的信息，并通过持续管理帮助做出更好的选择。利用技术创造实际价值，打造一个人人都能成长的环境。",
-      "即使在这个变革的时代，我也相信不断学习、创新、分享知识和经验才是真正的进步。为了创造一个共同成长的社会，今天我也将继续努力。",
+      "在清洁空气，我们将客户的健康和安全放在首位。空调是我们每天使用的必需家电，但如果没有得到适当的维护，细菌、霉菌和微尘会积累，对健康造成严重影响。为了解决这个问题，我们始终提供最高质量的清洗服务，帮助客户维持更舒适、健康的环境。",
+      "我们的核心价值观是诚实和信任。我们始终为客户提供透明的服务，在清洗后详细说明所完成的工作，并认为基于信任维持长期关系很重要。此外，我们专注于利用最新技术提供高效的服务。",
+      "我们也重视可持续性。通过使用考虑环境的环保清洗方法和产品，我们不仅努力让客户满意，还为地球环境做出贡献。作为当地社区的一员，我们履行社会责任，作为新村会青年会长，也致力于地区发展。清洁空气为了客户的幸福和健康持续成长，努力成为为更好的明天而奋斗的企业。",
       "谢谢。"
     ]
   }

@@ -416,25 +416,25 @@ return (
             <h3 className="font-bold text-lg mb-4">{translate('contact', language)}</h3>
             <div className="flex items-center space-x-2 mb-2">
               <Mail className="w-5 h-5" />
-              <p>zhrpxk0514@naver.com</p>
+              <p>hanse0206@naver.com</p>
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="w-5 h-5" />
-              <p>010-9984-9308</p>
+              <p>010-2776-9305</p>
             </div>
           </div>
           <div>
             <h3 className="font-bold text-lg mb-4">{translate('affiliation', language)}</h3>
             <div className="space-y-2">
-              <p>메리츠 RCM 2본부</p>
-              <p>(사)대한청년을세계로</p>
+              <p>클린에어</p>
+              <p>(사)대전청년을세계로</p>
               <p>새마을 대덕구청년미래연대</p>
             </div>
           </div>
           <div>
             <h3 className="font-bold text-lg mb-4">{translate('socialMedia', language)}</h3>
             <div className="space-y-2">
-              <Link href="https://www.instagram.com/o_ooookc/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400 transition duration-300">
+              <Link href="https://www.instagram.com/1_se_im/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-blue-400 transition duration-300">
                 <span>Instagram</span>
               </Link>
             </div>

@@ -22,10 +22,10 @@ export const translations: TranslationDictionary = {
     zh: '价值观',
   },
   valuesDescription: {
-    ko: 'AI로\n더 나은 삶을 만들고\n인연을 소중히',
-    en: 'Creating better lives\nwith AI and\nvaluing relationships',
-    ja: 'AIで\nより良い人生を創り\n縁を大切に',
-    zh: '用AI\n创造更好的生活\n珍惜缘分',
+    ko: '쾌적한 공기,\n건강한 환경을 위한\n에어컨 세척 전문가!',
+    en: 'Fresh Air,\nAir Conditioner Cleaning Expert\nfor a Healthy Environment!',
+    ja: '快適な空気,\n健康的な環境のための\nエアコン洗浄のプロフェッショナル！',
+    zh: '舒适空气,\n为健康环境而生的\n空调清洗专家！',
   },
   history: {
     ko: '연혁',
@@ -40,16 +40,16 @@ export const translations: TranslationDictionary = {
     zh: '项目',
   },
   name: {
-    ko: '오경찬',
-    en: 'Kyungchan Oh',
-    ja: '吳烱燦',
-    zh: '吳烱燦',
+    ko: '임한세',
+    en: 'HanSe Lim',
+    ja: '林韓勢',
+    zh: '林韓勢',
   },
   title: {
-    ko: 'Financial Planner|사단법인 부본부장',
-    en: 'Financial Planner|Vice Director of Non-Profit Organization',
-    ja: 'ファイナンシャルプランナー|社団法人副本部長',
-    zh: '理财规划师|社团法人副本部长',
+    ko: '클린에어 대표 · 사단법인 이사',
+    en: 'CEO of Clean Air · Director of Non-Profit Organization',
+    ja: 'クリーンエア代表 · 社団法人理事',
+    zh: '清洁空气代表 · 社团法人理事'
   },
   birth: {
     ko: '출생',
@@ -58,10 +58,10 @@ export const translations: TranslationDictionary = {
     zh: '出生',
   },
   birthDate: {
-    ko: '1998년 5월 14일',
-    en: 'May 14, 1998',
-    ja: '1998年5月14日',
-    zh: '1998年5月14日',
+    ko: '1996년 2월 6일',
+    en: 'February 6, 1996',
+    ja: '1996年2月6日',
+    zh: '1996年2月6日',
   },
   affiliation: {
     ko: '소속',
@@ -70,10 +70,10 @@ export const translations: TranslationDictionary = {
     zh: '隶属',
   },
   affiliationDescription: {
-    ko: '메리츠 RCM본부 2본부 3지점 FP\n(사)대한청년을세계로 대전본부 부본부장\n새마을 대덕구청년미래연대 부회장',
-    en: 'Financial Planner, Meritz RCM Division 2 Branch 3\nVice Director, Korea Youth to the World Association Daejeon Branch\nVice Chairman, Saemaul Daedeok-gu Youth Future Alliance',
-    ja: 'メリッツRCM本部第2本部第3支店 FP\n(社)大韓青年を世界へ大田本部副本部長\nセマウル大徳区青年未来連帯副会長',
-    zh: '美利兹RCM本部第2本部第3支店 理财规划师\n(社)韩国青年走向世界大田本部副本部长\n新村大德区青年未来联合副会长',
+    ko: '클린에어 대표\n(사)대전청년을세계로 법인 이사\n새마을 대덕구청년미래연대 회장',
+    en: 'CEO of Clean Air\nDirector of Daejeon Youth to the World Association\nChairman of Daedeok-gu Youth Future Alliance',
+    ja: 'クリーンエア代表\n(社)大田青年を世界へ法人理事\n新しい村 大徳区青年未来連帯会長',
+    zh: '清洁空气代表\n(社)大田青年走向世界法人理事\n新村大德区青年未来联盟会长'
   },
   education: {
     ko: '학력',
@@ -94,10 +94,10 @@ export const translations: TranslationDictionary = {
     zh: '领域',
   },
   fieldDescription: {
-    ko: 'AI, 보험, 청년',
-    en: 'AI, Insurance, Youth',
-    ja: 'AI、保険、青年',
-    zh: 'AI，保险，青年',
+    ko: '추가 예정',
+    en: 'Coming Soon',
+    ja: '追加予定',
+    zh: '即将添加',
   },
   mbti: {
     ko: 'MBTI',
@@ -214,16 +214,16 @@ export const translations: TranslationDictionary = {
     zh: '联系方式',
   },
   greetingTitle: {
-    ko: '소중한 인연을 잇고,\n더 나은 미래를 설계하다',
-    en: 'Connecting Precious Relationships,\nDesigning a Better Future',
-    ja: '大切な縁をつなぎ、\nより良い未来を設計する',
-    zh: '连接珍贵的缘分，\n设计更美好的未来',
+    ko: '최고 품질의 세척 서비스로,\n건강하고 쾌적한 환경을 만듭니다',
+    en: 'Creating a Healthy and Pleasant Environment\nwith Top-Quality Cleaning Services',
+    ja: '最高品質の洗浄サービスで、\n健康で快適な環境を作ります',
+    zh: '以最高品质的清洗服务，\n创造健康舒适的环境',
   },
   greetingDescription: {
-    ko: 'AI가 발전할수록,\n인간의 가치는 더욱 선명해집니다.\n\n저는 보험과 AI를 결합해\n더 정확하고 신뢰할 수 있는\n맞춤형 솔루션을 제공합니다.\n\n작은 인연도 소중히 여기며,\n더 나은 미래를 함께 만들어갑니다.',
-    en: 'As AI advances,\nhuman value becomes even clearer.\n\nI provide accurate and reliable\ncustomized solutions by combining\ninsurance with AI.\n\nValuing every connection,\nwe create a better future together.',
-    ja: 'AIが発展するほど、\n人間の価値はより鮮明になります。\n\n保険とAIを組み合わせ、\nより正確で信頼できる\nカスタマイズされたソリューションを提供します。\n\n小さな縁も大切にし、\nより良い未来を共に創造します。',
-    zh: '随着AI的发展，\n人类的价值愈发清晰。\n\n我通过结合保险和AI，\n提供更准确、更可靠的\n定制化解决方案。\n\n珍惜每一份缘分，\n共同创造更美好的未来。',
+    ko: '깨끗한 공기는 삶의 질을 높입니다.\n클린에어는 친환경적이고 안전한 세척 방법으로\n당신의 공간을 더욱 쾌적하게 유지합니다.\n\n신뢰받는 브랜드로 성장하기 위해,\n최고의 기술과 맞춤형 서비스로\n고객 만족을 최우선으로 합니다.',
+    en: 'Clean air enhances the quality of life.\nClean Air maintains your space more comfortably\nwith eco-friendly and safe cleaning methods.\n\nTo grow as a trusted brand,\nwe prioritize customer satisfaction\nwith the best technology and customized services.',
+    ja: 'きれいな空気は生活の質を高めます。\nクリーンエアは環境に優しく安全な洗浄方法で\nあなたの空間をより快適に保ちます。\n\n信頼されるブランドとして成長するため、\n最高の技術とカスタマイズされたサービスで\nお客様満足を最優先にします。',
+    zh: '清洁的空气提升生活品质。\n清洁空气通过环保安全的清洗方法，\n让您的空间更加舒适。\n\n为成长为值得信赖的品牌，\n我们以最佳技术和定制服务，\n将客户满意度放在首位。',
   },
   chatInputPlaceholder: {
     ko: '메시지를 입력하세요...',
@@ -298,16 +298,16 @@ export const translations: TranslationDictionary = {
     zh: '返回',
   },
   initialGreeting: {
-    ko: '안녕하세요! 저는 오경찬입니다. 무엇을 도와드릴까요?',
-    en: 'Hello! I am Kyungchan Oh. How can I help you?',
-    ja: 'こんにちは！吳烱燦と申します。何かお手伝いできることはありますか？',
-    zh: '你好！我是吳烱燦。我能为您做些什么？'
+    ko: '안녕하세요! 저는 임한세입니다. 무엇을 도와드릴까요?',
+    en: 'Hello! I am HanSe Lim. How can I help you?',
+    ja: 'こんにちは！林韓勢と申します。何かお手伝いできることはありますか？',
+    zh: '你好！我是林韓勢。我能为您做些什么？'
   },
   cloneGreeting: {
-    ko: "안녕하세요! 저는 오경찬's Clone입니다. 무엇을 도와드릴까요?",
-    en: "Hello! I'm Kyungchan Oh's Clone. How can I help you?",
-    ja: "こんにちは！吳烱燦のクローンです。どのようにお手伝いできますか？",
-    zh: "你好！我是吳烱燦的克隆。我能为您做些什么？"
+    ko: "안녕하세요! 저는 임한세's Clone입니다. 무엇을 도와드릴까요?",
+    en: "Hello! I'm HanSe Lim's Clone. How can I help you?",
+    ja: "こんにちは！林韓勢のクローンです。どのようにお手伝いできますか？",
+    zh: "你好！我是林韓勢的克隆。我能为您做些什么？"
   },
 };
 
