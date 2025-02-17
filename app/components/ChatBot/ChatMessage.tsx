@@ -14,15 +14,17 @@ export default function ChatMessage({ message, isDarkMode }: ChatMessageProps) {
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-4`}>
       <div className={`flex ${isUser ? 'flex-row-reverse' : 'flex-row'} items-start max-w-[80%]`}>
-        <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
-          <Image
-            src={isUser ? '/profile.png' : '/profile.png'}
-            alt={isUser ? 'User Avatar' : 'Bot Avatar'}
-            width={32}
-            height={32}
-            className="object-cover"
-          />
-        </div>
+        {!isUser && (
+          <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+            <Image
+              src="/profile.png"
+              alt="Bot Avatar"
+              width={32}
+              height={32}
+              className="object-cover"
+            />
+          </div>
+        )}
         <div
           className={`max-w-[80%] rounded-lg px-4 py-2 ${
             isUser
