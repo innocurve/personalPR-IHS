@@ -26,7 +26,7 @@ export default function ChatMessage({ message, isDarkMode }: ChatMessageProps) {
           </div>
         )}
         <div
-          className={`max-w-[80%] rounded-lg px-4 py-2 ${
+          className={`rounded-lg px-4 py-2 ${
             isUser
               ? 'bg-blue-500 text-white'
               : isDarkMode
@@ -34,7 +34,7 @@ export default function ChatMessage({ message, isDarkMode }: ChatMessageProps) {
               : 'bg-gray-100 text-gray-900'
           }`}
         >
-          <p className="whitespace-pre-wrap break-words">{message.content}</p>
+          <p className="whitespace-normal break-words">{message.content}</p>
         </div>
       </div>
     </div>
