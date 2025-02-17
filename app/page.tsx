@@ -204,7 +204,7 @@ return (
         }
       }
     `}</style>
-    <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
+     <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center">
