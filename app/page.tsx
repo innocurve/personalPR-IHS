@@ -13,7 +13,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import MyValues from './components/MyValues'
-import History from './components/Career'
 import FadeInSection from './components/FadeInSection'
 import { useState, useEffect } from 'react';
 import { Menu, X, Mail, Phone } from 'lucide-react'
@@ -23,16 +22,56 @@ import type { PostData } from './types/post'
 export default function Home() {
 const [isMenuOpen, setIsMenuOpen] = useState(false)
 const { language } = useLanguage();
-const [posts, setPosts] = useState<PostData[]>([
+const [posts] = useState<PostData[]>([
   { 
     id: 1, 
+    title: {
+      ko: '클린에어 에어컨 세척 작업',
+      en: 'Cleaning work of air conditioner',
+      ja: '空調清掃作業',
+      zh: '空调清洗作业',
+    },
+    image: '/postimage/id1image.png',
+    images: [
+      '/postimage/id1image2.png',
+      '/postimage/id1image3.png',
+      '/postimage/id1image4.png',
+      '/postimage/id1image5.png',
+      '/postimage/id1image6.png'
+    ],
+    description: {
+      ko: '각종 에어컨 제품의 세척 일부 사진입니다. 오염된 에어컨을 세척하면 호흡기 질환을 예방하고, 냉난방비를 절약하며, 에어컨의 냉난방 효율을 높일 수 있습니다.',
+      en: 'These are some photos of cleaning various air conditioner products. Cleaning contaminated air conditioners can prevent respiratory diseases, save heating and cooling costs, and improve air conditioning efficiency.',
+      ja: 'さまざまなエアコン製品の清掃写真の一部です。汚れたエアコンを清掃することで、呼吸器疾患を予防し、冷暖房費を節約し、エアコンの冷暖房効率を向上させることができます。',
+      zh: '这些是各种空调产品清洗的部分照片。清洗受污染的空调可以预防呼吸系统疾病，节省冷暖气费用，并提高空调的制冷制热效率。',
+    },
+    tags: ['#에어컨세척', '#실내공기질', '#에너지절약', '#냉난방효율']
+  },
+  { 
+    id: 2, 
+    title: {
+      ko: '새마을 대덕구청년미래연대',
+      en: 'Daedeok-gu Youth Future Alliance',
+      ja: '大徳区青年未来連帯会',
+      zh: '大德区青年未来联盟',
+    },
+    image: '/postimage/id2image.png',
+    description: {
+      ko: '새마을 대덕구청년미래연대는 청년들의 성장과 지역 사회 발전을 위해 활동하는 단체입니다. 다양한 봉사와 네트워킹을 통해 공동체 의식을 함양하고, 청년들의 역량 강화를 지원하며, 지속 가능한 지역 발전을 위한 다양한 프로젝트를 진행하고 있습니다.',
+      en: 'Daedeok-gu Youth Future Alliance is an organization that works for the growth of young people and the development of the local community. Through various volunteer activities and networking, we foster community awareness, support youth capacity building, and conduct various projects for sustainable local development.',
+      ja: '大徳区青年未来連帯会は、若者の成長と地域社会の発展のために活動する団体です。様々なボランティア活動とネットワーキングを通じて、コミュニティ意識を育み、若者の能力向上を支援し、持続可能な地域発展のための様々なプロジェクトを推進しています。',
+      zh: '大德区青年未来联盟是一个致力于青年成长和地区社会发展的组织。通过各种志愿服务和社交活动，培养社区意识，支持青年能力建设，并开展各种可持续地区发展项目。',
+    },
+    tags: ['#청년성장', '#지역발전', '#봉사활동', '#네트워킹']
+  },
+  { 
+    id: 3, 
     title: {
       ko: '(사)대한청년을세계로 미래전략포럼 개최',
       en: 'Future Strategy Forum held by Korean Youth to the World Association',
       ja: '(社)大韓青年を世界へ 未来戦略フォーラム開催',
       zh: '(社)韩国青年走向世界协会举办未来战略论坛',
     },
-    date: '2024.12.3',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%EB%AF%B8%EB%9E%98%EC%A0%84%EB%9E%B5%ED%8F%AC%EB%9F%BC.jpg-lobjD33dLn9HHvFaqwYC57KhFIHDJb.jpeg',
     description: {
       ko: '기술혁신의 시대속에서 청년들의 미래를 위한 전략을 논의하는 포럼을 개최합니다.',
@@ -41,128 +80,14 @@ const [posts, setPosts] = useState<PostData[]>([
       zh: '举办论坛，讨论技术创新时代青年未来的战略。',
     },
     tags: ['#청년미래', '#기술혁신', '#전략포럼', '#글로벌비전']
-  },
-  { 
-    id: 2, 
-    title: {
-      ko: '이노커브 InnoCard',
-      en: 'Innocurve InnoCard',
-      ja: 'イノカーブ InnoCard',
-      zh: 'InnoCurve InnoCard',
-    },
-    date: '2024-03-01',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C%20(300%20x%20200%20px)-YqEdcEhhDJYNijbTp5DIM9uER4sZNS.png',
-    description: {
-      ko: '종이 명함을 넘어 자신만의 웹사이트로 나를 표현하고, 연결하며, 확장할 수 있는 AI 전자명함 서비스를 소개합니다. 당신의 이야기를 담고, 네트워크를 스마트하게 이어주는 디지털 공간을 만나보세요.',
-      en: 'Introducing AI digital business cards that go beyond paper, allowing you to express, connect, and expand through your own website. Discover a digital space that holds your story and smartly connects your network.',
-      ja: '紙の名刺を超え、自分だけのウェブサイトで自己表現、つながり、拡張できるAIデジタル名刺サービスをご紹介します。あなたのストーリーを込め、ネットワークをスマートにつなぐデジタル空間をご体験ください。',
-      zh: '介绍一款超越纸质名片的AI电子名片服务，您可以通过自己的网站来表达、连接和扩展自己。探索一个承载您的故事并智能连接您的网络的数字空间。',
-    },
-    tags: ['#전자명함', '#개인브랜딩', '#네트워크확장', '#AI솔루션']
-  },
-  { 
-    id: 3, 
-    title: {
-      ko: '이노커브 AIConnect',
-      en: 'Innocurve AIConnect',
-      ja: 'イノカーブ AIConnect',
-      zh: 'InnoCurve AIConnect',
-    },
-    date: '2024-02-15',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/INNOCURVE-UEJ6P4SmjI6dvCbd6jXEsOFWMdMjqW.png',
-    description: {
-      ko: '기술 발전의 혜택을 누구나 누릴 수 있도록, 각 산업별 맞춤형 AI 컨설팅과 최적화된 솔루션을 제공합니다.',
-      en: 'We provide customized AI consulting and optimized solutions for each industry to ensure everyone can enjoy the benefits of technological advancement.',
-      ja: '技術発展の恩恵を誰もが享受できるよう、各産業別にカスタマイズされたAIコンサルティングと最適化されたソリューションを提供します。',
-      zh: '我们为各个行业提供定制的AI咨询和优化的解决方案，以确保每个人都能享受到技术进步的益处。',
-    },
-    tags: ['#AI컨설팅', '#맞춤형솔루션', '#기술혁신', '#산업최적화']
-  },
-  { 
-    id: 4, 
-    title: {
-      ko: '이노커브 마케팅',
-      en: 'Innocurve Marketing',
-      ja: 'イノカーブマーケティング',
-      zh: 'InnoCurve营销',
-    },
-    date: '2024-01-10',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C%20(300%20x%20200%20px)%20(1)-NxaNNp6obIPVIlOTroVTYrMKQeS8Z2.png',
-    description: {
-      ko: 'AI를 활용한 홈페이지, 이미지, 영상 등 다양한 디지털 콘텐츠 제작을 통해 비용은 효율적으로 절감하고, 최상의 퀄리티로 효과적인 홍보를 지원합니다.',
-      en: 'We support effective promotion with top quality while efficiently reducing costs through the production of various digital content such as AI-powered websites, images, and videos.',
-      ja: 'AIを活用したホームページ、画像、動画など、さまざまなデジタルコンテンツの制作を通じてコストを効率的に削減し、最高の品質で効果的なプロモーションをサポートします。',
-      zh: '通过制作AI驱动的网站、图像和视频等各种数字内容，有效降低成本，并以最高质量支持有效的推广。',
-    },
-    tags: ['#AI마케팅', '#디지털콘텐츠', '#비용효율화', '#퀄리티향상']
-  },
-  {
-    id: 5,
-    title: {
-      ko: '금강샤론',
-      en: 'Geumgang Sharon',
-      ja: '金剛シャロン',
-      zh: '金刚沙龙',
-    },
-    date: '2024-01-05',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8-FGdqIT95etjPBkIXDiG4NcAKWr8gZC.png',
-    description: {
-      ko: '40년의 전통과 장인 정신으로 빚어낸 유리 공예의 아름다움, 금강샤론그라스는 고급스러운 디자인과 뛰어난 품질로 담금주의 깊은 맛과 멋을 완성하는 대한민국 대표 유리 용기 브랜드입니다.',
-      en: 'With 40 years of tradition and craftsmanship, Geumgang Sharon Glass is Korea\'s leading glass container brand that completes the deep taste and style of liquor with luxurious design and excellent quality.',
-      ja: '40年の伝統と職人精神で作り上げたガラス工芸の美しさ、金剛シャロングラスは高級なデザインと優れた品質で漬け込み酒の深い味わいと風情を完成させる韓国を代表するガラス容器ブランドです。',
-      zh: '拥有40年传统和工艺精神的金刚沙龙玻璃，以其奢华的设计和卓越的品质，完成了韩国顶级玻璃容器品牌的深厚口感和格调。',
-    },
-    tags: ['#담금주', '#프리미엄디자인', '#장인정신', '#유리공예']
-  },
+  }
 ]);
 
+useEffect(() => {
+  localStorage.setItem('posts', JSON.stringify(posts));
+}, [posts]);
+
 const router = useRouter();
-
-// 초기 데이터 로드
-useEffect(() => {
-  const loadInitialData = () => {
-    const storedPosts = localStorage.getItem('posts');
-    if (!storedPosts) {
-      // 초기 데이터가 없을 때만 설정
-      localStorage.setItem('posts', JSON.stringify(posts));
-    } else {
-      // 저장된 데이터가 있으면 그것을 사용
-      setPosts(JSON.parse(storedPosts));
-    }
-  };
-
-  loadInitialData();
-}, []); // 컴포넌트 마운트 시 한 번만 실행
-
-// localStorage 데이터 변경 감지 및 상태 업데이트
-useEffect(() => {
-  const handleStorageChange = () => {
-    const storedPosts = localStorage.getItem('posts');
-    if (storedPosts) {
-      setPosts(JSON.parse(storedPosts));
-    }
-  };
-
-  window.addEventListener('storage', handleStorageChange);
-  return () => {
-    window.removeEventListener('storage', handleStorageChange);
-  };
-}, []); // 컴포넌트 마운트 시 이벤트 리스너 등록
-
-// 페이지 포커스 시 데이터 새로고침
-useEffect(() => {
-  const handleFocus = () => {
-    const storedPosts = localStorage.getItem('posts');
-    if (storedPosts) {
-      setPosts(JSON.parse(storedPosts));
-    }
-  };
-
-  window.addEventListener('focus', handleFocus);
-  return () => {
-    window.removeEventListener('focus', handleFocus);
-  };
-}, []); // 컴포넌트 마운트 시 이벤트 리스너 등록
 
 const handlePostClick = (postId: number) => {
   router.push(`/post/${postId}`);
@@ -225,7 +150,6 @@ return (
               <Link href="#profile" onClick={(e) => handleScrollTo(e, 'profile')} className="font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300">{translate('profile', language)}</Link>
               <Link href="#smart-options" onClick={(e) => handleScrollTo(e, 'smart-options')} className="font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300">{translate('smartOptions', language)}</Link>
               <Link href="#values" onClick={(e) => handleScrollTo(e, 'values')} className="font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300">{translate('values', language)}</Link>
-              <Link href="#history" onClick={(e) => handleScrollTo(e, 'history')} className="font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300">{translate('history', language)}</Link>
               <Link href="#community" onClick={(e) => handleScrollTo(e, 'community')} className="font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300">{translate('activities', language)}</Link>
             </nav>
             <LanguageToggle />
@@ -249,7 +173,6 @@ return (
             <Link href="#profile" onClick={(e) => { setIsMenuOpen(false); handleScrollTo(e, 'profile'); }} className="block p-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300 font-mono tracking-tight">{translate('profile', language)}</Link>
             <Link href="#smart-options" onClick={(e) => { setIsMenuOpen(false); handleScrollTo(e, 'smart-options'); }} className="block p-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300 font-mono tracking-tight">{translate('smartOptions', language)}</Link>
             <Link href="#values" onClick={(e) => { setIsMenuOpen(false); handleScrollTo(e, 'values'); }} className="block p-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300 font-mono tracking-tight">{translate('values', language)}</Link>
-            <Link href="#history" onClick={(e) => { setIsMenuOpen(false); handleScrollTo(e, 'history'); }} className="block p-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300 font-mono tracking-tight">{translate('history', language)}</Link>
             <Link href="#community" onClick={(e) => { setIsMenuOpen(false); handleScrollTo(e, 'community'); }} className="block p-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300 font-mono tracking-tight">{translate('activities', language)}</Link>
           </div>
         </motion.nav>
@@ -273,12 +196,7 @@ return (
               <div className="text-center">
                 <h2 className="text-4xl sm:text-5xl font-bold mb-3">{translate('name', language)}</h2>
                 <p className="text-2xl sm:text-3xl text-gray-600 mb-6">
-                  {translate('title', language).split('|').map((part, index) => (
-                    <span key={index} className="sm:inline block">
-                      {index > 0 && <span className="sm:inline hidden"> · </span>}
-                      {part}
-                    </span>
-                  ))}
+                  {translate('title', language)}
                 </p>
               </div>
               <div className="w-full max-w-2xl mx-auto">
@@ -290,16 +208,7 @@ return (
                     value={translate('affiliationDescription', language).split('\n')} 
                     className="text-center"
                   />
-                  <ProfileItem 
-                    label={translate('education', language)} 
-                    value={translate('educationDescription', language).split('\n')} 
-                    className="text-center"
-                  />
-                  <ProfileItem 
-                    label={translate('field', language)} 
-                    value={[translate('fieldDescription', language)]} 
-                    className="text-center"
-                  />
+                  <ProfileItem label={translate('field', language)} value={[translate('fieldDescription', language)]} className="text-center" />
                 </div>
               </div>
             </div>
@@ -322,15 +231,9 @@ return (
           </section>
         </FadeInSection>
       </div>
+
       <div className="w-full overflow-x-hidden">
         <FadeInSection>
-          <section id="history" className="mb-8 bg-white rounded-xl p-8 shadow-lg overflow-hidden relative">
-            <History />
-          </section>
-        </FadeInSection>
-      </div>
-      <div className="w-full overflow-x-hidden">
-      <FadeInSection>
           <section id="community" className="py-16">
             <div className="container mx-auto px-4">
               <Swiper

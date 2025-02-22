@@ -63,9 +63,6 @@ export default function Navigation({ language }: NavigationProps) {
               <Link href="/#smart-options" className="font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300">
                 {translate('smartOptions', language)}
               </Link>
-              <Link href="/#history" className="font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300">
-                {translate('history', language)}
-              </Link>
               <Link href="/#values" className="font-mono tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300">
                 {translate('values', language)}
               </Link>
@@ -96,9 +93,6 @@ export default function Navigation({ language }: NavigationProps) {
               </Link>
               <Link href="/#smart-options" className="block p-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300 font-mono tracking-tight">
                 {translate('smartOptions', language)}
-              </Link>
-              <Link href="/#history" className="block p-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300 font-mono tracking-tight">
-                {translate('history', language)}
               </Link>
               <Link href="/#values" className="block p-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 transition duration-300 font-mono tracking-tight">
                 {translate('values', language)}

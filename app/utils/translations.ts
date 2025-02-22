@@ -94,10 +94,10 @@ export const translations: TranslationDictionary = {
     zh: '领域',
   },
   fieldDescription: {
-    ko: '추가 예정',
-    en: 'Coming Soon',
-    ja: '追加予定',
-    zh: '即将添加',
+    ko: 'AI, 청년, 에어컨 세척',
+    en: 'AI, Youth, Air Conditioner Cleaning',
+    ja: 'AI、青年、エアコン洗浄',
+    zh: 'AI，青年，空调清洗',
   },
   mbti: {
     ko: 'MBTI',
