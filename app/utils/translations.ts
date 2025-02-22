@@ -46,10 +46,10 @@ export const translations: TranslationDictionary = {
     zh: '林韓勢',
   },
   title: {
-    ko: '클린에어 대표 · 사단법인 이사',
-    en: 'CEO of Clean Air · Director of Non-Profit Organization',
-    ja: 'クリーンエア代表 · 社団法人理事',
-    zh: '清洁空气代表 · 社团法人理事'
+    ko: '사단법인 이사 · 기업인',
+    en: 'Director of Non-Profit Organization · Business Owner',
+    ja: '社団法人理事 · 企業主',
+    zh: '社团法人理事 · 企业主'
   },
   birth: {
     ko: '출생',

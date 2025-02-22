@@ -14,10 +14,10 @@ export default function GreetingVideo() {
   const [isPlaying, setIsPlaying] = useState(false)
 
   const videoSources = {
-    ko: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/KakaoTalk_20241215_192017967-fPJmLLPpokC9OE7iczdUQlgGvgImk3.mp4",
-    en: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20Video%20(10)-3TdUn7xqPnnpeeVyofZDDUKiIoig5x.mp4",
-    ja: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/KakaoTalk_20241215_192019850-uUa3gchO094I9intvck6PuN9mrwKti.mp4",
-    zh: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Untitled%20Video%20(13)-47V2mk3OlCFd5iuV7NdVvhnrVWCSuF.mp4"
+    ko: "/greetingvideo/greetingko.mp4",
+    en: "/greetingvideo/greetingen.mp4",
+    ja: "/greetingvideo/greetingja.mp4",
+    zh: "/greetingvideo/greetingzh.mp4"
   }
 
   const togglePlay = () => {
