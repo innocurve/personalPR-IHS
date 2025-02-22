@@ -202,10 +202,10 @@ export const translations: TranslationDictionary = {
     zh: '问候视频',
   },
   innoCardInquiry: {
-    ko: 'InnoCard\n문의',
-    en: 'InnoCard\nInquiry',
-    ja: 'InnoCard\nお問い合わせ',
-    zh: 'InnoCard\n咨询',
+    ko: '문의',
+    en: 'Inquiry',
+    ja: 'お問い合わせ',
+    zh: '咨询',
   },
   contactOptions: {
     ko: '연락하기',
@@ -214,16 +214,16 @@ export const translations: TranslationDictionary = {
     zh: '联系方式',
   },
   greetingTitle: {
-    ko: '최고 품질의 세척 서비스로,\n건강하고 쾌적한 환경을 만듭니다',
-    en: 'Creating a Healthy and Pleasant Environment\nwith Top-Quality Cleaning Services',
-    ja: '最高品質の洗浄サービスで、\n健康で快適な環境を作ります',
-    zh: '以最高品质的清洗服务，\n创造健康舒适的环境',
+    ko: '희미해지는 것이 아닌,\n더 깊이 새겨지는\n당신의 존재',
+    en: 'Not fading away,\nYour presence\nDeepens over time',
+    ja: '消えゆくのではなく、\nより深く刻まれゆく\nあなたの存在',
+    zh: '不是渐渐褪色，\n而是愈发深刻地\n铭记你的存在',
   },
   greetingDescription: {
-    ko: '깨끗한 공기는 삶의 질을 높입니다.\n클린에어는 친환경적이고 안전한 세척 방법으로\n당신의 공간을 더욱 쾌적하게 유지합니다.\n\n신뢰받는 브랜드로 성장하기 위해,\n최고의 기술과 맞춤형 서비스로\n고객 만족을 최우선으로 합니다.',
-    en: 'Clean air enhances the quality of life.\nClean Air maintains your space more comfortably\nwith eco-friendly and safe cleaning methods.\n\nTo grow as a trusted brand,\nwe prioritize customer satisfaction\nwith the best technology and customized services.',
-    ja: 'きれいな空気は生活の質を高めます。\nクリーンエアは環境に優しく安全な洗浄方法で\nあなたの空間をより快適に保ちます。\n\n信頼されるブランドとして成長するため、\n最高の技術とカスタマイズされたサービスで\nお客様満足を最優先にします。',
-    zh: '清洁的空气提升生活品质。\n清洁空气通过环保安全的清洗方法，\n让您的空间更加舒适。\n\n为成长为值得信赖的品牌，\n我们以最佳技术和定制服务，\n将客户满意度放在首位。',
+    ko: '인간의 존엄이 위협받는 AI 시대에도,\n당신의 이야기는 결코 흐려지지 않습니다.\n\nInnoCard는 당신의 가치를 더 선명하고,\n더 오래도록 기억하게 만듭니다.',
+    en: 'Even in the AI era where human dignity is threatened,\nyour story will never fade.\n\nInnoCard makes your value clearer\nand more memorable for longer.',
+    ja: '人間の尊厳が脅かされるAI時代でも、\nあなたの物語は決して薄れることはありません。\n\nInnoCardで、あなたの価値を\nより鮮明に、より永く心に刻みます。',
+    zh: '即使在人类尊严受到威胁的AI时代，\n你的故事也永远不会褪色。\n\nInnoCard让你的价值\n更清晰，更持久地铭记于心。',
   },
   chatInputPlaceholder: {
     ko: '메시지를 입력하세요...',
@@ -309,6 +309,18 @@ export const translations: TranslationDictionary = {
     ja: "こんにちは！林韓勢のクローンです。どのようにお手伝いできますか？",
     zh: "你好！我是林韓勢的克隆。我能为您做些什么？"
   },
+formEmail: {
+  ko: '이메일',
+  en: 'Email',
+  ja: 'メール',
+  zh: '电子邮件',
+},
+formEmailPlaceholder: {
+  ko: '이메일을 입력하세요',
+  en: 'Enter your email',
+  ja: 'メールアドレスを入力してください',
+  zh: '请输入电子邮件',
+},
 };
 
 export function translate(key: TranslationKey, lang: Language): string {
@@ -320,4 +332,3 @@ export function translate(key: TranslationKey, lang: Language): string {
     return key;
   }
 }
-
