@@ -40,16 +40,16 @@ export const translations: TranslationDictionary = {
     zh: '项目',
   },
   name: {
-    ko: '임한세',
-    en: 'HanSe Lim',
-    ja: '林韓勢',
-    zh: '林韓勢',
+    ko: '유현규',
+    en: 'HyunKyu Yu',
+    ja: '兪賢奎',
+    zh: '兪賢奎',
   },
   title: {
-    ko: '사단법인 이사 · 기업인',
-    en: 'Director of Non-Profit Organization · Business Owner',
-    ja: '社団法人理事 · 企業主',
-    zh: '社团法人理事 · 企业主'
+    ko: '클린에어 대표 · 사단법인 이사',
+    en: 'CEO of Clean Air · Director of Non-Profit Organization',
+    ja: 'クリーンエア代表 · 社団法人理事',
+    zh: '清洁空气代表 · 社团法人理事'
   },
   birth: {
     ko: '출생',
@@ -58,10 +58,10 @@ export const translations: TranslationDictionary = {
     zh: '出生',
   },
   birthDate: {
-    ko: '1996년 2월 6일',
-    en: 'February 6, 1996',
-    ja: '1996年2月6日',
-    zh: '1996年2月6日',
+    ko: '1999년 11월 27일',
+    en: 'November 27, 1999',
+    ja: '1999年11月27日',
+    zh: '1999年11月27日',
   },
   affiliation: {
     ko: '소속',
@@ -298,29 +298,29 @@ export const translations: TranslationDictionary = {
     zh: '返回',
   },
   initialGreeting: {
-    ko: '안녕하세요! 저는 임한세입니다. 무엇을 도와드릴까요?',
-    en: 'Hello! I am HanSe Lim. How can I help you?',
-    ja: 'こんにちは！林韓勢と申します。何かお手伝いできることはありますか？',
-    zh: '你好！我是林韓勢。我能为您做些什么？'
+    ko: '안녕하세요! 저는 유현규입니다. 무엇을 도와드릴까요?',
+    en: 'Hello! I am HyunKyu Yu. How can I help you?',
+    ja: 'こんにちは！兪賢奎と申します。何かお手伝いできることはありますか？',
+    zh: '你好！我是兪賢奎。我能为您做些什么？'
   },
   cloneGreeting: {
-    ko: "안녕하세요! 저는 임한세's Clone입니다. 무엇을 도와드릴까요?",
-    en: "Hello! I'm HanSe Lim's Clone. How can I help you?",
-    ja: "こんにちは！林韓勢のクローンです。どのようにお手伝いできますか？",
-    zh: "你好！我是林韓勢的克隆。我能为您做些什么？"
+    ko: "안녕하세요! 저는 유현규's Clone입니다. 무엇을 도와드릴까요?",
+    en: "Hello! I'm HyunKyu Yu's Clone. How can I help you?",
+    ja: "こんにちは！兪賢奎のクローンです。どのようにお手伝いできますか？",
+    zh: "你好！我是兪賢奎的克隆。我能为您做些什么？"
   },
-formEmail: {
-  ko: '이메일',
-  en: 'Email',
-  ja: 'メール',
-  zh: '电子邮件',
-},
-formEmailPlaceholder: {
-  ko: '이메일을 입력하세요',
-  en: 'Enter your email',
-  ja: 'メールアドレスを入力してください',
-  zh: '请输入电子邮件',
-},
+  formEmail: {
+    ko: '이메일',
+    en: 'Email',
+    ja: 'メール',
+    zh: '电子邮件',
+  },
+  formEmailPlaceholder: {
+    ko: '이메일을 입력하세요',
+    en: 'Enter your email',
+    ja: 'メールアドレスを入力してください',
+    zh: '请输入电子邮件',
+  },
 };
 
 export function translate(key: TranslationKey, lang: Language): string {

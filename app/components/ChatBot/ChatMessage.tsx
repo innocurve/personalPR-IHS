@@ -134,7 +134,7 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, isDarkMode }) => {
       setAudioUrl(newAudioUrl)
       
       const newAudio = new Audio(newAudioUrl)
-      newAudio.playbackRate = 1.3
+      newAudio.playbackRate = 1.0
 
       // 재생 완료 시 처리
       newAudio.onended = () => {
