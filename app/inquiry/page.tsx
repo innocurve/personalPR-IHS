@@ -74,10 +74,10 @@ export default function InquiryPage() {
               <div className="self-start">
                 <Link href="/" className="p-2 rounded-full hover:bg-gray-100 flex items-center gap-2">
                   <ArrowLeft className="w-5 h-5" />
-                  <span className="text-gray-600">{translate('back', language)}</span>
+                  <span className="text-gray-600">Back</span>
                 </Link>
               </div>
-              <CardTitle className="text-2xl font-bold mt-4">
+              <CardTitle className="text-2xl font-bold mt-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
                 {translate('innoCardInquiry', language)}
               </CardTitle>
             </CardHeader>
@@ -152,22 +152,24 @@ export default function InquiryPage() {
           </Card>
 
           <div className="text-center space-y-4 mt-8 relative">
-            <svg className="absolute top-0 left-0 w-16 h-16 text-gray-400 transform -translate-x-1/4 -translate-y-1/4 z-0" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-            </svg>
-            <div className="relative z-10 text-2xl font-bold mb-4">
-              {translate('greetingTitle', language).split('\n').map((line, i) => (
-                <p key={i}>{line}</p>
-              ))}
+            <div className="flex items-center justify-center mb-8">
+              <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+              <h3 className="mx-4 text-sm xs:text-base sm:text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                {translate('greetingTitle', language).split('\n').map((line, i) => (
+                  <span key={i} className="block whitespace-nowrap">{line}</span>
+                ))}
+              </h3>
+              <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
             </div>
-            <p className="text-lg relative z-10">
-              {translate('greetingDescription', language).split('\n').map((line, i) => (
-                <span key={i}>{line}<br /></span>
+            <p className="text-xs xs:text-sm sm:text-base text-gray-600 leading-relaxed font-bold space-y-4">
+              {translate('greetingDescription', language).split('\n\n').map((paragraph, i) => (
+                <span key={i} className="block">
+                  {paragraph.split('\n').map((line, j) => (
+                    <span key={j} className="block whitespace-nowrap">{line}</span>
+                  ))}
+                </span>
               ))}
             </p>
-            <svg className="absolute top-0 right-0 w-16 h-16 text-gray-400 transform translate-x-1/4 -translate-y-1/4 rotate-180 z-0" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-            </svg>
           </div>
         </div>
       </main>

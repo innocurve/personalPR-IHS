@@ -144,19 +144,18 @@ return (
         }
       }
     `}</style>
-     <header className="bg-white/80 backdrop-blur-sm border-b border-gray-200 fixed top-0 left-0 right-0 z-50">
+     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-200">
       <div className="max-w-screen-xl mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image 
                 src="/logo.png" 
                 alt="이노커브 로고" 
                 width={160} 
-                height={64} 
+                height={40} 
                 priority
-                className="object-contain cursor-pointer"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                className="object-contain w-auto h-auto"
               />
             </Link>
           </div>
@@ -341,7 +340,7 @@ return (
             <h3 className="font-bold text-lg mb-4">{translate('contact', language)}</h3>
             <div className="flex items-center space-x-2 mb-2">
               <Mail className="w-5 h-5" />
-              <p>hkyu1127@naver.com</p>
+              <p>sunfeel548@naver.com</p>
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="w-5 h-5" />

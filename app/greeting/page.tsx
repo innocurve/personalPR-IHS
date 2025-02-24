@@ -7,13 +7,10 @@ import { translate } from '../utils/translations'
 import { useLanguage } from '../hooks/useLanguage'
 import Navigation from '../components/Navigation'
 import Link from 'next/link'
-
-interface VideoSources {
-  [key: string]: string;
-}
+import Image from 'next/image'
 
 export default function GreetingVideo() {
-  const { language } = useLanguage() as { language: 'ko' | 'en' | 'ja' | 'zh' }
+  const { language } = useLanguage()
   const videoRef = useRef<HTMLVideoElement>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [translatedTitle, setTranslatedTitle] = useState('')
@@ -49,110 +46,115 @@ export default function GreetingVideo() {
   useEffect(() => {
     async function translateContent() {
       try {
-        const title = '희미해지는 것이 아닌,\n더 깊이 새겨지는\n당신의 존재'
-        const description = '인간의 존엄이 위협받는 AI 시대에도,\n당신의 이야기는 결코 흐려지지 않습니다.\n\nInnoCard는 당신의 가치를 더 선명하고,\n더 오래도록 기억하게 만듭니다.'
-
-        if (language === 'ko') {
-          setTranslatedTitle(title)
-          setTranslatedDescription(description)
-          return
-        }
-
-        const [titleTranslation, descTranslation] = await Promise.all([
-          translate(title, language),
-          translate(description, language)
-        ])
-
-        setTranslatedTitle(titleTranslation)
-        setTranslatedDescription(descTranslation)
+        setTranslatedTitle(translate('greetingTitle', language))
+        setTranslatedDescription(translate('greetingDescription', language))
       } catch (error) {
         console.error('Translation error:', error)
       }
     }
 
     translateContent()
-  }, [language, translate])
+  }, [language])
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <Navigation language={language} />
+      {/* 네비게이션 */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b">
+        <Navigation language={language} />
+      </div>
 
-      <main className="flex-grow pt-16 pb-12 px-4 min-h-screen">
-        <div className="h-full max-w-8xl mx-auto">
-          <Card className="w-full h-full bg-white/80 backdrop-blur-sm shadow-xl">
-            <CardHeader className="border-b">
-              <div className="max-w-8xl mx-auto w-full flex justify-between items-center px-4">
-                <Link 
-                  href="/" 
-                  className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  <ArrowLeft className="w-5 h-5" />
-                  <span className="font-medium">Back</span>
-                </Link>
-                <CardTitle className="text-3xl font-bold text-gray-900">
-                  {translate('greetingVideo', language)}
-                </CardTitle>
-                <div className="w-20" /> {/* 균형을 위한 빈 공간 */}
+      {/* 메인 컨텐츠 */}
+      <main className="container mx-auto pt-24 pb-12 px-4 relative">
+        <Card className="relative overflow-hidden">
+          {/* 배경 이미지 */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/network-graph.svg"
+              alt="Background Pattern"
+              fill
+              className="object-cover opacity-40 transform scale-125"
+              priority
+            />
+          </div>
+
+          <CardHeader className="relative z-10 border-b bg-white/90 backdrop-blur-sm">
+            <div className="flex justify-between items-center">
+              <Link 
+                href="/" 
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-sm sm:text-base font-medium">Back</span>
+              </Link>
+              <CardTitle className="inline-block w-max text-xl sm:text-2xl md:text-3xl font-bold text-transparent  bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                {translate('greetingVideo', language)}
+              </CardTitle>
+              <div className="invisible flex items-center gap-2">
+                <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span className="text-sm sm:text-base font-medium">Back</span>
               </div>
-            </CardHeader>
+            </div>
+          </CardHeader>
 
-            <CardContent className="p-8">
-              <div className="flex flex-col lg:flex-row gap-12 items-stretch h-full">
-                {/* 비디오 섹션 */}
-                <div className="w-full lg:w-3/5 lg:sticky lg:top-8">
-                  <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-2xl">
+          <CardContent className="relative z-10 p-4 sm:p-6 md:p-8">
+            {/* 상단 섹션: 동영상 + 텍스트 */}
+            <div className="flex flex-col lg:flex-row gap-8 items-stretch justify-center w-full max-w-3xl mx-auto mb-8">
+              {/* 비디오 섹션 */}
+              <div className="w-full lg:w-2/5 flex items-center">
+                <div className="w-full bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-3">
+                  <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                     <div className="relative w-full h-full">
                       <video 
                         ref={videoRef}
                         src={videoSources[language] || videoSources['en']}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover cursor-pointer"
                         playsInline
+                        onClick={togglePlay}
                       >
                         Your browser does not support the video tag.
                       </video>
-                      <button 
-                        onClick={togglePlay}
-                        className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/40 transition-all duration-300"
-                        aria-label={isPlaying ? 'Pause video' : 'Play video'}
-                      >
-                        <div className="transform transition-transform duration-300 hover:scale-110">
-                          {isPlaying ? (
-                            <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                              <rect x="6" y="4" width="4" height="16" />
-                              <rect x="14" y="4" width="4" height="16" />
-                            </svg>
-                          ) : (
-                            <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                              <polygon points="5 3 19 12 5 21 5 3" />
-                            </svg>
-                          )}
-                        </div>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-                {/* 텍스트 섹션 */}
-                <div className="w-full lg:w-2/5 relative">
-                  <div className="relative px-8 py-10 text-center bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] backdrop-blur-sm h-full flex flex-col justify-center">
-                    <div className="relative z-10">
-                      <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-4">
-                        {translatedTitle.split('\n').map((line, i) => (
-                          <p key={i} className="mb-1">{line}</p>
-                        ))}
-                      </h2>
-                      <div className="text-lg text-gray-600 leading-normal">
-                        {translatedDescription.split('\n').map((line, i) => (
-                          <p key={i} className="mb-3">{line}</p>
-                        ))}
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+
+              {/* 오른쪽 텍스트 섹션 */}
+              <div className="w-full lg:w-3/5 flex items-center">
+                <div className="h-full w-full px-6 py-8 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg flex items-center justify-center">
+                  <div className="text-[0.75rem] xs:text-[0.85rem] sm:text-base text-gray-600 leading-relaxed whitespace-pre-line font-bold">
+                    {translate('greetingScript', language)}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 하단 섹션 */}
+            <div className="max-w-3xl mx-auto">
+              <div className="px-6 py-8 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg text-center">
+                <div className="max-w-2xl mx-auto">
+                  <div className="flex items-center justify-center mb-8">
+                    <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+                    <h3 className="mx-4 text-sm xs:text-base sm:text-lg font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                      {translate('greetingTitle', language).split('\n').map((line, i) => (
+                        <span key={i} className="block whitespace-nowrap">{line}</span>
+                      ))}
+                    </h3>
+                    <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-transparent"></div>
+                  </div>
+                  <p className="text-xs xs:text-sm sm:text-base text-gray-600 leading-relaxed font-bold space-y-4">
+                    {translate('greetingDescription', language).split('\n\n').map((paragraph, i) => (
+                      <span key={i} className="block">
+                        {paragraph.split('\n').map((line, j) => (
+                          <span key={j} className="block whitespace-nowrap">{line}</span>
+                        ))}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </main>
     </div>
   )

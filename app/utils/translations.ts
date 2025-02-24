@@ -42,8 +42,8 @@ export const translations: TranslationDictionary = {
   name: {
     ko: '유현규',
     en: 'HyunKyu Yu',
-    ja: '兪賢奎',
-    zh: '兪賢奎',
+    ja: '柳賢圭',
+    zh: '柳賢圭',
   },
   title: {
     ko: '클린에어 대표 · 사단법인 이사',
@@ -306,8 +306,8 @@ export const translations: TranslationDictionary = {
   cloneGreeting: {
     ko: "안녕하세요! 저는 유현규's Clone입니다. 무엇을 도와드릴까요?",
     en: "Hello! I'm HyunKyu Yu's Clone. How can I help you?",
-    ja: "こんにちは！兪賢奎のクローンです。どのようにお手伝いできますか？",
-    zh: "你好！我是兪賢奎的克隆。我能为您做些什么？"
+    ja: "こんにちは！柳賢圭のクローンです。どのようにお手伝いできますか？",
+    zh: "你好！我是柳賢圭的克隆。我能为您做些什么？"
   },
   formEmail: {
     ko: '이메일',
@@ -320,6 +320,12 @@ export const translations: TranslationDictionary = {
     en: 'Enter your email',
     ja: 'メールアドレスを入力してください',
     zh: '请输入电子邮件',
+  },
+  greetingScript: {
+    ko: '',
+    en: '',
+    ja: '',
+    zh: ''
   },
 };
 

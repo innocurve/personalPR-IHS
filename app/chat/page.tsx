@@ -13,8 +13,8 @@ import Navigation from '../components/Navigation'
 const initialMessages = {
   ko: "안녕하세요! 저는 유현규's Clone입니다. 무엇을 도와드릴까요?",
   en: "Hello! I'm Hyunkyu Yu's Clone. How can I help you?",
-  ja: "こんにちは！兪賢奎のクローンです。どのようにお手伝いできますか？",
-  zh: "你好！我是兪賢奎的克隆。我能为您做些什么？"
+  ja: "こんにちは！柳賢圭のクローンです。どのようにお手伝いできますか？",
+  zh: "你好！我是柳賢圭的克隆。我能为您做些什么？"
 };
 
 export default function ChatPage() {
@@ -240,7 +240,7 @@ export default function ChatPage() {
                 priority
               />
             </div>
-            <span className="text-lg font-medium">{translate('name', language)}{translate('cloneTitle', language)}</span>
+            <span className="text-lg font-medium text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">{translate('name', language)}{translate('cloneTitle', language)}</span>
           </div>
           <div className="flex items-center gap-2">
             <button
